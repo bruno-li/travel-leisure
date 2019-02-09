@@ -1,0 +1,449 @@
+@import "mixin";
+$color-primary-green: #44b27b;
+///// SET UP ///////////////////
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    /* inherited the box-sizing property in the body selector to apply in the entire document */
+    box-sizing: inherit;
+}
+
+body {
+    /* let us customize the box size model with specific unit without the default values */
+    box-sizing: border-box;
+}
+
+//////////////// NAVIGATION /////////////////
+.navbar {
+
+    width: 100%;
+    height: 5.7rem;
+    background: #fff;
+    box-shadow: 0 2px 5px 0 hsla(240, 3%, 85%, .7);
+    &-main {
+        display: flex;
+        position: fixed;
+        top: 0;
+        margin: auto;
+        width: 100%;
+        height: 50px;
+        align-items: center;
+        justify-content: space-between;
+        background: #fff;
+        color: rgba(0, 0, 0, .95);
+        box-shadow: 0 2px 5px 0 hsla(240, 3%, 85%, .7); // media query
+        @include respond(tab-port) {
+            margin: 0;
+            justify-content: space-between;
+        } /////////////
+        &-left {
+            display: flex;
+            align-items: center;
+            flex: 3;
+        }
+        &-right {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            flex: 1;
+        }
+        li {
+            font-family: "Roboto", sans-serif;
+            font-size: 12px;
+            line-height: 24px;
+            font-weight: 900;
+            list-style: none;
+            padding: 12px 8px;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            a {
+                display: inline-block;
+                color: #000;
+                text-decoration: none;
+                &:hover {
+                    color: $color-primary-green;
+                }
+            }
+        } ///// media query ///////
+        &-list {
+            @include respond(tab-land) {}
+            @include respond(tab-port) {
+                display: none;
+            }
+            @include respond(phone) {}
+        } ////////////////////
+    }
+    &-hamburger {
+        margin-left: 3rem;
+        margin-right: 1.5rem;
+        &-logo {
+            width: 20px;
+        } ///// media query ///////
+        @include respond(tab-land) {}
+        @include respond(tab-port) {
+
+        }
+        @include respond(phone) {
+            margin-right: 0;
+            margin-left: 1rem;
+        }
+        ///// ////// ///////
+    }
+    &-logo {
+        margin-right: auto;
+        &-img {
+            width: 140px;
+            @include respond(tab-port) {
+                margin-left: 11rem;
+                margin-right: 8rem;
+            }
+            @include respond(phone) {
+                margin-left: 10rem;
+                margin-right: 4rem;
+            }
+            @include respond(small-phone) {
+                width: 120px;
+                margin-left: 5rem;
+                margin-right: 1rem;
+            }
+            @include respond(smallest-phone) {
+                margin-left: 4.5rem;
+                margin-right: 0;
+             }
+        } 
+    }
+    &-mag-icon {
+        margin-top: 3px;
+        height: 40px; 
+        ///// media query ///////
+        @include respond(tab-port) {
+            display: none;
+        } //////////////////////
+    }
+    &-search {
+        margin-left: 30px;
+        margin-right: 50px;
+        height: 18px; 
+        ///// media query ///////
+        @include respond(tab-port) {
+            display: none;
+        } ///////////////////////
+    }
+}
+
+#active {
+    color: $color-primary-green;
+    margin-left: 2rem;
+    @include respond(small-phone) {
+       font-size: 11px;
+    }
+    @include respond(smallest-phone) {
+        font-size: 10px;
+     }
+}
+
+#navbar-hamburger--li {
+    padding: 0;
+}
+
+#navbar-logo--li {
+    padding: 0;
+}
+
+#navbar-icons {
+    display: flex;
+    align-items: center;
+    margin-right: 40px;
+    padding: 0;
+}
+
+//////////////// MAIN //////////////////////
+.main-container {
+    margin: 0 auto;
+    width: 90%;
+   
+    @include respond(tab-port) {
+        width: 100%;
+    }
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    margin-top: 40px;
+    &-container {
+        display: flex;
+        flex-direction: column;
+    }
+    &-links {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 18px;
+        li {
+            font-family: 'Playfair Display', sans-serif;
+            font-size: 18px;
+            line-height: 13px;
+            font-weight: 700;
+            margin: 0 13px;
+            color: $color-primary-green;
+            a {
+                color: $color-primary-green;
+                text-decoration: none;
+                &:hover {
+                    color: #0f7bae;
+                }
+            }
+        }
+        li:first-child {
+            list-style: none;
+        }
+    }
+    &-social-media {
+        display: flex;
+        justify-content: center;
+
+        &-icons {
+            width: 20%;
+            height: 20%;
+
+            @include respond(tab-port) {
+                width: 30%;
+                height: 30%;
+            }
+        }
+    }
+    h1 {
+        font-family: "Roboto", sans-serif;
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 42px;
+        text-align: center;
+        color: #111;
+        margin: 0;
+        margin-bottom: 18px;
+
+        @include respond(tab-port) {
+            font-size: 46px;
+        }
+        @include respond(phone) {
+            font-size: 32px;
+        }
+        @include respond(small-phone) {
+            line-height: 35px;
+        }
+    }
+}
+
+.figure-container {
+    max-width: 850px;
+    margin: 20px auto;
+    .figure-image {
+        max-width: 100%;
+    }
+    &-caption {
+        font-family: sans-serif;
+        font-size: 9px;
+        line-height: 12px;
+        color: #a3a5a9;
+        margin: 5px 1px;
+    }
+}
+
+/////////////// EMAIL SUBSCRIPTION FORM ///////////////////
+.subscription {
+    background-color: #ffe84f;
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 37px 25px;
+    h2 {
+        font-family: "Playfair Display", TImes, serif;
+        font-size: 30px;
+        line-height: 23px;
+        color: #000;
+        font-weight: 700;
+        text-align: center;
+        margin: 5px 0;
+    }
+    p {
+        font-family: "Roboto", sans-serif;
+        font-size: 16px;
+        line-height: 18px;
+        color: #000;
+        text-align: center;
+        margin: 15px 0;
+    }
+    &-email {
+        display: flex;
+        max-width: 100%;
+        margin: 0 auto;
+        &-sub {
+            position: relative;
+            display: flex;
+            margin: 0 auto;
+        }
+        &-form {
+            padding: 20px 0;
+            height: 30px;
+            font-size: 13px;
+            font-weight: 300;
+            color: #212121;
+            width: 280px;
+            margin-right: 5px;
+            border: none;
+            &::placeholder {
+                text-align: center;
+            }
+        }
+        &-img {
+            position: absolute;
+            bottom: 7px;
+            left: 9px;
+            height: 25px;
+        }
+        &-btn {
+            background-color: #000;
+            color: #ffe84f;
+            width: 280px;
+            border: none;
+            font-family: "Roboto", sans-serif;
+            font-size: 16px;
+            line-height: 16px;
+            text-transform: uppercase;
+        }
+    }
+}
+
+////////////////////////////////////////////////////
+////////// MAIN CONTENT ////////////
+.main-content {
+    margin: 20px auto;
+    max-width: 780px;
+
+
+    p {
+        font-family: "Rasa", sans-serif;
+        font-size: 20px;
+        line-height: 30px;
+        font-weight: 300;
+        margin: 20px;
+        color: #111;
+
+        @include respond(phone) {
+            font-size: 21px;
+        }
+        @include respond(small-phone) {
+            font-size: 18px;
+
+        }
+    }
+}
+
+.author-photo {
+    width: 260px;
+    margin-left: 22px;
+}
+
+.movie-title {
+    h3 {
+        font-family: 'Playfair Display', sans-serif;
+        font-style: italic;
+        font-size: 24px;
+        font-weight: 700;
+        color: #111;
+        margin-bottom: 20px;
+        margin-left: 20px;
+
+        @include respond(small-phone) {
+            font-size: 18px;
+           
+        }
+    }
+    span {
+        display: block;
+        margin-bottom: 20px;
+        margin-left: 20px;
+        font-family: "Rasa", sans-serif;
+        font-size: 20px;
+        line-height: 30px;
+        @include respond(small-phone) {
+            font-size: 18px;
+        }
+    }
+    &-img {
+        max-width: 100%;
+
+
+    @include respond(tab-port) {
+        padding-right: 10px;
+        padding-left: 10px;
+    }
+   
+    }
+}
+
+
+
+////////////////////// FOOTER //////////////////////////
+
+.footer-container{
+
+    margin-top: 2rem;
+    display: flex;
+    // justify-content: center;
+    flex-direction: column;
+    margin: 2rem auto;
+    border-top: 1px solid #9A9A9A;
+
+    figure {
+        margin: 0 auto;
+    }
+    &-logo{
+        display: block;
+
+        margin-top: 2rem;
+        width: 35%;
+        margin-bottom: 1rem;
+        margin-left: 12rem;
+
+        @include respond(small-phone) {
+            margin-left: 7rem;
+        }
+        @include respond(smallest-phone) {
+            margin-left: 6rem;
+        }
+
+        
+
+    }
+    &-social{
+        width: 35%;
+        margin-bottom: 2rem;
+        margin-left: 12rem;
+        @include respond(small-phone) {
+            margin-left: 7rem;
+        }
+        @include respond(smallest-phone) {
+            margin-left: 6rem;
+        }
+
+    }
+
+    .copyright{
+        width: 60%;
+        margin: 1rem auto;
+        font-family: sans-serif;
+        text-align: center;
+        font-size: 10px;
+        line-height: 20px;
+        color: #8b8d91;
+        @include respond(small-phone) {
+            width: 80%;
+        }
+        @include respond(smallest-phone) {
+            width: 100%;
+        }
+
+    }
+}
