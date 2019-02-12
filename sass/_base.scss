@@ -1,0 +1,43 @@
+///// SET UP ///////////////////
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    /* inherited the box-sizing property in the body selector to apply in the entire document */
+    box-sizing: inherit;
+}
+
+body {
+    /* let us customize the box size model with specific unit without the default values */
+    box-sizing: border-box;
+}
+
+// MEDIA QUERIES MANAGER
+@mixin respond ($breakpoint) {
+	@if $breakpoint==smallest-phone {
+		@media (max-width: 375px) { 
+			@content; //allows us to pass a block of code to the mixin
+		} 
+	}
+	@if $breakpoint==small-phone {
+		@media (max-width: 420px) { 
+			@content; 
+		} 
+	}
+	@if $breakpoint==phone {
+		@media (max-width: 600px) { 
+			@content; 
+		} 
+	}
+	@if $breakpoint==tab-port {
+		@media (max-width: 900px) { 
+			@content; 
+		} 
+	}
+	@if $breakpoint==tab-land {
+		@media (max-width: 1200px) { 
+			@content;
+		} 
+	}
+}
