@@ -13,6 +13,11 @@ body {
     box-sizing: border-box;
 }
 
+// Colors Variables
+$color-primary-green: #44b27b;
+$color-primary-black: rgba(0, 0, 0, .95);
+
+
 // MEDIA QUERIES MANAGER
 @mixin respond ($breakpoint) {
     /* Custom, iPhone Retina */ 
