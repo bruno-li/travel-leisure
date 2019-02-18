@@ -1,5 +1,5 @@
 ////////////////////// FOOTER //////////////////////////
-.footer-container{
+.footer{
     margin-top: 2rem;
     display: flex;
     flex-direction: column;
@@ -8,32 +8,31 @@
     figure {
         margin: 0 auto;
     }
-    &-logo{
+    &__logo{
         display: block;
         margin-top: 2rem;
         width: 35%;
         margin-bottom: 1rem;
         margin-left: 12rem;
         ///// media query ///////
-        @include respond(small-phone) {
-            margin-left: 7rem;
-        }
-        @include respond(smallest-phone) {
-            margin-left: 6rem;
-        }
+        // @include respond(small-phone) {
+        //     margin-left: 7rem;
+        // }
+        // @include respond(smallest-phone) {
+        //     margin-left: 6rem;
+        // }
     }
-    &-social{
+    &__social{
         width: 35%;
         margin-bottom: 2rem;
         margin-left: 12rem;
         ///// media query ///////
-        @include respond(small-phone) {
-            margin-left: 7rem;
-        }
-        @include respond(smallest-phone) {
-            margin-left: 6rem;
-        }
-
+        // @include respond(small-phone) {
+        //     margin-left: 7rem;
+        // }
+        // @include respond(smallest-phone) {
+        //     margin-left: 6rem;
+        // }
     }
 
     .copyright{

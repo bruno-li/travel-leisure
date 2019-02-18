@@ -15,27 +15,32 @@ body {
 
 // MEDIA QUERIES MANAGER
 @mixin respond ($breakpoint) {
+    /* Custom, iPhone Retina */ 
 	@if $breakpoint==smallest-phone {
-		@media (max-width: 375px) { 
+		@media (max-width: 320px) { 
 			@content; //allows us to pass a block of code to the mixin
 		} 
 	}
+    /* Extra Small Devices, Phones */ 
 	@if $breakpoint==small-phone {
-		@media (max-width: 420px) { 
+		@media (max-width: 480px) { 
 			@content; 
 		} 
 	}
+    /* Small Devices, Tablets */
 	@if $breakpoint==phone {
-		@media (max-width: 600px) { 
+		@media (max-width: 768px) { 
 			@content; 
 		} 
 	}
+    /* Medium Devices */
 	@if $breakpoint==tab-port {
-		@media (max-width: 900px) { 
+		@media (max-width: 992px) { 
 			@content; 
 		} 
 	}
-	@if $breakpoint==tab-land {
+    /* Large Devices, Wide Screens */
+	@if $breakpoint==desktop {
 		@media (max-width: 1200px) { 
 			@content;
 		} 
