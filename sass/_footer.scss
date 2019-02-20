@@ -1,38 +1,22 @@
-////////////////////// FOOTER //////////////////////////
 .footer{
     margin-top: 2rem;
     display: flex;
     flex-direction: column;
     margin: 2rem auto;
     border-top: 1px solid #9A9A9A;
-    figure {
+ 
+    .figure {
         margin: 0 auto;
-    }
-    &__logo{
-        display: block;
-        margin-top: 2rem;
-        width: 35%;
-        margin-bottom: 1rem;
-        margin-left: 12rem;
-        ///// media query ///////
-        // @include respond(small-phone) {
-        //     margin-left: 7rem;
-        // }
-        // @include respond(smallest-phone) {
-        //     margin-left: 6rem;
-        // }
-    }
-    &__social{
-        width: 35%;
-        margin-bottom: 2rem;
-        margin-left: 12rem;
-        ///// media query ///////
-        // @include respond(small-phone) {
-        //     margin-left: 7rem;
-        // }
-        // @include respond(smallest-phone) {
-        //     margin-left: 6rem;
-        // }
+        &__logo{
+            display: block;
+            margin-top: 2rem;
+            width: 200px;
+            margin-bottom: 1rem;
+        }
+        &__social{
+            width: 200px;
+            margin-bottom: 2rem;
+        }
     }
 
     .copyright{
@@ -43,13 +27,6 @@
         font-size: 10px;
         line-height: 20px;
         color: #8b8d91;
-        ///// media query ///////
-        @include respond(small-phone) {
-            width: 80%;
-        }
-        @include respond(smallest-phone) {
-            width: 100%;
-        }
 
     }
 }

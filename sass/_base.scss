@@ -20,15 +20,9 @@ $color-primary-black: rgba(0, 0, 0, .95);
 
 // MEDIA QUERIES MANAGER
 @mixin respond ($breakpoint) {
-    /* Custom, iPhone Retina */ 
-	@if $breakpoint==smallest-phone {
-		@media (max-width: 320px) { 
-			@content; //allows us to pass a block of code to the mixin
-		} 
-	}
     /* Extra Small Devices, Phones */ 
 	@if $breakpoint==small-phone {
-		@media (max-width: 480px) { 
+		@media (max-width: 512px) { 
 			@content; 
 		} 
 	}
