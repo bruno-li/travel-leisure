@@ -3,7 +3,6 @@
     height: 5.7rem;
     background: #fff;
     box-shadow: 0 2px 5px 0 hsla(240, 3%, 85%, .7);
-
     // SUB CONTAINER
     &__sub-container {
         display: flex;
@@ -17,7 +16,6 @@
         background: #fff;
         color: $color-primary-black;
         box-shadow: 0 2px 5px 0 hsla(240, 3%, 85%, .7); 
-
         // LEFT NAVBAR
         &__left {
             display: flex;
@@ -26,8 +24,7 @@
             list-style: none;
 
             .navbar-hamburger{
-                margin-left: 3rem;
-                margin-right: 1.5rem;
+                margin: 0 1.5rem 0 3rem;
                 &-logo {
                     width: 20px;
                 }
@@ -35,7 +32,6 @@
                     padding: 0;
                 }
             }
-
             .navbar-logo{
                 margin-right: auto;
 
@@ -48,7 +44,6 @@
             }
 
         }
-
         //  RIGHT NAVBAR
         &__right {
             display: flex;
@@ -56,11 +51,10 @@
             justify-content: flex-end;
             list-style: none;
             flex: 1;
+            // MEDIA QUERIES
             @include respond(phone){
                 display: none;
             }
-
-
             .navbar-right-list{
                     font-family: "Roboto", sans-serif;
                     font-size: 12px;
@@ -96,8 +90,7 @@
                             height: 40px; 
                         }
                         &__search {
-                            margin-left: 30px;
-                            margin-right: 50px;
+                            margin: 0 50px 0 30px;
                             height: 18px; 
                         }
                      }
