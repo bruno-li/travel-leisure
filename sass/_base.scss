@@ -31,7 +31,7 @@ body {
 	}
     /* Medium Devices */
 	@if $breakpoint==tab-port {
-		@media (max-width: 992px) { 
+		@media (max-width: 1024px) { 
 			@content; 
 		} 
 	}
