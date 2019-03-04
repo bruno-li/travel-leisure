@@ -20,7 +20,7 @@
         align-items: center;
         justify-content: space-between;
         background: #fff;
-        color: $color-primary-black;
+        color: rgba(0, 0, 0, 0.95);
         box-shadow: 0 2px 5px 0 hsla(240, 3%, 85%, .7); 
 
         // LEFT NAVBAR
@@ -30,7 +30,7 @@
             list-style: none;
 
             &__menu{
-                margin-left: 6rem;
+                margin-left: 14rem;
                 &__img{
                     height: 14px;
                 }
@@ -52,18 +52,17 @@
             align-items: center;
             justify-content: flex-end;
             list-style: none;
-            margin-right: 1rem;
+            margin-right: 8rem;
             &__list{
-              
                     list-style: none;
                     padding: 12px 8px;
-                    letter-spacing: 1px;
+                    letter-spacing: 2px;
                     text-transform: uppercase;
 
                     &__link{
                         display: inline-block;
-                        color: $color-primary-black;
                         text-decoration: none;
+                        color: rgba(0, 0, 0, 0.95);
                         &:hover {
                             color: #286891;
                         }
