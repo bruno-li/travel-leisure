@@ -37,6 +37,9 @@
       @include respond(tab-port){
         margin: 1rem 3rem
       }
+      @include respond(small-phone){
+        margin: .6rem 1rem;
+    }
         &__link{
             font-size: 13px;
             font-weight: 700;
@@ -48,13 +51,17 @@
     }
 
     &__first-col{
-        list-style: none;
+        list-style: none;   
         &__items{
             margin: .6rem 4rem;
                 // MEDIA QUERIES
                 @include respond(tab-port){
                     margin: .6rem 3rem;
                   }
+                  @include respond(small-phone){
+                    margin: .6rem 1rem;
+                }
+              
             &__link{
                 font-size: 14px;
                 text-decoration: none;
@@ -73,6 +80,9 @@
                 @include respond(tab-port){
                     margin: .6rem 3rem;
                   }
+                  @include respond(small-phone){
+                    margin: .6rem 1rem;
+                }
             &__link{
                 font-size: 14px;
                 text-decoration: none;
@@ -84,13 +94,15 @@
 
     &__third-col{
         list-style: none;
-
         &__items{
             margin: .6rem 4rem;
           // MEDIA QUERIES
          @include respond(tab-port){
             margin: .6rem 3rem;
           }
+        @include respond(small-phone){
+          margin: .6rem 1rem;
+         }
             &__link{
                 font-size: 14px;
                 text-decoration: none;
@@ -108,6 +120,9 @@
          @include respond(tab-port){
             margin: .6rem 3rem;
           }
+          @include respond(small-phone){
+            margin: .6rem 0;
+           }
             &__link{
                 font-size: 14px;
                 text-decoration: none;

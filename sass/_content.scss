@@ -1,17 +1,19 @@
 .main-container {
-
     font-family: "Taviraj",sans-serif;
     margin: 0 auto;
     width: 90%;
     max-width: 900px;
+    // MEDIA QUERIES
+    @include respond(phone){
+        width: 100%;
+    }
 
-// HEADER
-.header {
+ // HEADER
+ .header {
     display: flex;
     justify-content: center;
     margin-top: 40px;
     
-
     &__container {
         display: flex;
         flex-direction: column;
@@ -56,15 +58,26 @@
         text-align: center;
         margin: 0 0 18px 0;
         color: rgba(0, 0, 0, 0.95);
+        // MEDIA QUERIES
+        @include respond(phone){
+            font-size: 30px;
+            line-height: 40px;
+        }
+        @include respond(small-phone){
+            font-size: 24px;
+            line-height: 36px;
+        }
     }
 
     &__social-media {
         display: flex;
         justify-content: center;
-
         &__icons {
             width: 25%;
             height: 100%;
+            @include respond(small-phone){
+                width: 45%;
+            }
         }
     }
 }
@@ -104,10 +117,18 @@
         letter-spacing: .5px;
         margin: 20px;
         color: rgba(0, 0, 0, 0.95);
+        @include respond(small-phone){
+            font-size: 15px;
+            line-height: 24px;
+        }
         &--link{
-            display: inline;
+            display: inline-block;
             margin: 20px 20px 0 20px;
             border-bottom: 2px solid #68a19a;
+            @include respond(small-phone){
+                font-size: 15px;
+                line-height: 24px;
+            }
         }
     }
 
