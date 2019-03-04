@@ -1,8 +1,14 @@
 .navbar {
+    font-family: 'Roboto Condensed', Arial;
+    font-size: 13px;
+    line-height: 24px;
+    letter-spacing: 1px;
+    font-weight: 700;
     width: 100%;
-    height: 5.7rem;
+    height: 7rem;
     background: #fff;
     box-shadow: 0 2px 5px 0 hsla(240, 3%, 85%, .7);
+
     // SUB CONTAINER
     &__sub-container {
         display: flex;
@@ -16,67 +22,56 @@
         background: #fff;
         color: $color-primary-black;
         box-shadow: 0 2px 5px 0 hsla(240, 3%, 85%, .7); 
+
         // LEFT NAVBAR
-        &__left {
+        .navbar__left {
             display: flex;
             align-items: center;
-            flex: 3;
             list-style: none;
 
-            .navbar-hamburger{
-                margin: 0 1.5rem 0 3rem;
-                &-logo {
-                    width: 20px;
-                }
-                &--pad {
-                    padding: 0;
+            &__menu{
+                margin-left: 6rem;
+                &__img{
+                    height: 14px;
                 }
             }
-            .navbar-logo{
-                margin-right: auto;
+            &__logo{
+                margin: 8px 0 0 16px;
+               &__img{
+                width: 118px;
 
-                &--pad {
-                    padding: 0;
-                }
-                &__img{
-                    width: 140px;
-                }
+               }
+
             }
 
         }
+
         //  RIGHT NAVBAR
-        &__right {
+       .navbar__right {
             display: flex;
             align-items: center;
             justify-content: flex-end;
             list-style: none;
-            flex: 1;
-            // MEDIA QUERIES
-            @include respond(phone){
-                display: none;
-            }
-            .navbar-right-list{
-                    font-family: "Roboto", sans-serif;
-                    font-size: 12px;
-                    line-height: 24px;
-                    font-weight: 900;
+            margin-right: 1rem;
+            &__list{
+              
                     list-style: none;
                     padding: 12px 8px;
                     letter-spacing: 1px;
                     text-transform: uppercase;
+
                     &__link{
                         display: inline-block;
                         color: $color-primary-black;
                         text-decoration: none;
                         &:hover {
-                            color: $color-primary-green;
+                            color: #286891;
                         }
-                    }
 
-                    &--active{
-                        text-decoration: none;
-                        color: $color-primary-green;
-                        margin-left: 1rem;
+                        &--active{
+                            text-decoration: none;
+                            color: #68a19a;
+                        }
                     }
 
                 &__icon {
@@ -86,14 +81,14 @@
                     padding: 0;
 
                         &__mag {
-                            margin-top: 3px;
+                            margin-top: 9px;
                             height: 40px; 
                         }
                         &__search {
                             margin: 0 50px 0 30px;
-                            height: 18px; 
+                            height: 28px; 
                         }
-                     }
+                 }
             }
         }
     }
